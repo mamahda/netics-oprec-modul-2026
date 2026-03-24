@@ -26,7 +26,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./src/app
           push: true
           tags: |
             ghcr.io/${{ github.repository }}/netics-modul1:latest
