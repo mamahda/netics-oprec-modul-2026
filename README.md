@@ -1,8 +1,12 @@
 # Laporan Modul 1 OPREC NETICS
 
-**Nama:** Gilbran Mahdavikia Raja  
-**NRP:** 5025241134  
-**VPS:** Azure (IP: `20.239.119.236`, Domain: `http://oprec-netics.eastasia.cloudapp.azure.com`)
+| **Nama**                | **NRP**    |
+| ----------------------- | ---------- |
+| Gilbran Mahdavikia Raja | 5025241134 |
+
+**VPS :** Microsoft Azure <br>
+**IP Address :** `20.239.119.236` <br>
+**Domain :** `oprec-netics.eastasia.cloudapp.azure.com`
 
 ---
 
