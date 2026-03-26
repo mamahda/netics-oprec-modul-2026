@@ -20,6 +20,7 @@ func main() {
 		}
 
 		currentTime := time.Now()
+		upTime := time.Since(serverTime)
 
 		// TODO: Bikin response buat endpoint /health
 		response := map[string]interface{}{
@@ -27,7 +28,7 @@ func main() {
 			"nrp":       "5025241134",
 			"status":    "UP",
 			"timestamp": currentTime,
-			"uptime":    serverTime,
+			"uptime":    upTime,
 		}
 
 		w.Header().Set("Content-Type", "application/json")
