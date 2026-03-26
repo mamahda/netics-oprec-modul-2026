@@ -28,7 +28,7 @@ func main() {
 			"nrp":       "5025241134",
 			"status":    "UP",
 			"timestamp": currentTime,
-			"uptime":    upTime,
+			"uptime":    upTime.String(),
 		}
 
 		w.Header().Set("Content-Type", "application/json")
