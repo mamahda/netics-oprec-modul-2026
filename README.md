@@ -27,7 +27,7 @@
 
 ## 1. Gambaran Umum
 
-Proyek ini mengimplementasikan modul CI/CD lengkap yang terdiri dari:
+Project ini mengimplementasikan modul CI/CD yang terdiri dari:
 
 - **API publik** berbasis Go yang mengekspos endpoint `/health`
 - **Containerisasi** menggunakan Docker dengan multi-stage build
@@ -73,7 +73,7 @@ Developer → Push ke GitHub (branch: main)
 
 ### Deskripsi
 
-API ditulis menggunakan bahasa Go dengan library standar (`net/http`). Server mendengarkan pada port **8080** di dalam container dan mengekspos satu endpoint: `/health`.
+API ditulis menggunakan bahasa Go dengan library standar (`net/http`). Server berjalan pada port **8080** di dalam container dan mengekspos satu endpoint: `/health`.
 
 ### Source Code
 
@@ -149,7 +149,7 @@ func main() {
 
 ### Dockerfile
 
-Menggunakan **multi-stage build** untuk menghasilkan image yang ringan dan aman.
+Menggunakan **multi-stage build** untuk menghasilkan image docker yang ringan dan aman.
 
 ```dockerfile
 # Stage 1: Builder — kompilasi binary Go
@@ -195,22 +195,11 @@ ENTRYPOINT ["./app"]
 - Membuat user `appuser` non-root untuk keamanan — container tidak berjalan sebagai root
 - Hanya menyalin binary hasil kompilasi, tidak ada source code di image final
 
-### Struktur Direktori
-
-```
-.
-└── src/
-    └── app/
-        ├── main.go
-        ├── go.mod
-        └── Dockerfile
-```
-
 ---
 
 ## 5. Konfigurasi Ansible
 
-Ansible digunakan untuk mengotomasi instalasi dan konfigurasi Nginx sebagai reverse proxy di VPS, tanpa perlu konfigurasi manual.
+Ansible digunakan untuk mengotomasi konfigurasi Nginx sebagai reverse proxy di VPS, tanpa perlu konfigurasi manual.
 
 ### Inventory
 
