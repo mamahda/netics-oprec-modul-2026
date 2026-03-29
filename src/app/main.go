@@ -29,6 +29,7 @@ func main() {
 			"status":    "UP",
 			"timestamp": currentTime,
 			"uptime":    upTime.String(),
+			"test": "success"
 		}
 
 		w.Header().Set("Content-Type", "application/json")
